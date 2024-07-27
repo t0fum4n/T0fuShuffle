@@ -82,7 +82,7 @@ services:
     volumes:
       - ${DB_LOCATION}:/usr/share/opensearch/data:z
     ports:
-      - "9201:9200"  # Changed this line
+      - "9201:9201"  # Changed this line
     networks:
       - shuffle
     restart: unless-stopped
