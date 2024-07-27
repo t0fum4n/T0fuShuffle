@@ -23,7 +23,7 @@ services:
     volumes:
       - ~/git/shuffle/shuffle-database:/usr/share/opensearch/data
     ports:
-      - 9201:9200
+      - 9201:9201
     networks:
       - opensearch-net
 
