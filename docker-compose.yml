@@ -9,7 +9,7 @@ services:
       - "${FRONTEND_PORT_HTTPS}:443"
     networks:
       macvlan:
-        ipv4_address: 192.168.1.100
+        ipv4_address: 192.168.65.100
     environment:
       - BACKEND_HOSTNAME=${BACKEND_HOSTNAME}
     restart: unless-stopped
@@ -24,7 +24,7 @@ services:
       - "${BACKEND_PORT}:5001"
     networks:
       macvlan:
-        ipv4_address: 192.168.1.101
+        ipv4_address: 192.168.65.101
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${SHUFFLE_APP_HOTLOAD_LOCATION}:/shuffle-apps:z
@@ -41,7 +41,7 @@ services:
     hostname: shuffle-orborus
     networks:
       macvlan:
-        ipv4_address: 192.168.1.102
+        ipv4_address: 192.168.65.102
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
@@ -91,7 +91,7 @@ services:
       - "9200:9200"
     networks:
       macvlan:
-        ipv4_address: 192.168.1.103
+        ipv4_address: 192.168.65.103
     restart: unless-stopped
 
 networks:
